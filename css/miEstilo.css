@@ -8,6 +8,22 @@ body {
 	color: #5a5a5a;
 }
 
+.divK1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #f1e4b2;
+}
+
+.mensajes {
+  padding-left: 10%;
+}
+
+.mensajes button {
+  margin-left: 40%;
+}
+
 .navbar {
   height: 60px;
   background-color: #f1e4b2;
