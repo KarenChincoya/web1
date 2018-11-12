@@ -119,3 +119,18 @@ function addQuestion(){
 
 	contador+=1;
 }
+
+$(document).ready(function () {
+    $('.navbar-nav li a').click(function(e) {
+    	//remove from the pre-existing active classes
+        $('.navbar-nav li.active').removeClass('active');
+
+        var $parent = $(this).parent();
+        $parent.addClass('active');
+
+        //load the page that the link was pointing to
+        $('#content').load($(this).find(a).attr('href')); 
+
+        e.preventDefault();
+    });
+});
