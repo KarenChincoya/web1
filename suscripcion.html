@@ -44,7 +44,8 @@
 	<br/><br/>
 
 	<div class="container" style="background-color: #f2e7d7">
-		<form method="get">
+		
+		<form action="#" oninput="range_control_value.value = range_control.valueAsNumber">
 
 		<div class="row">
 			<div class="col-sm-12">
@@ -58,70 +59,70 @@
 		<hr style="color: #46bc34;">
 
 		<div class="form-group row">
-    		<label for="nombre" class="col-sm-2 col-form-label">Nombres(s)</label>
+    		<label for="nombre" class="col-sm-2">Nombres(s)</label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control-plaintext" name="nombre" id="nombre" placeholder="">
+      			<input type="text" name="nombre" id="nombre" autofocus required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-    		<label for="apellido1" class="col-sm-2 col-form-label">Apellido paterno</label>
+    		<label for="apellido1" class="col-sm-2">Apellido paterno</label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control-plaintext" name="apellido1" id="apellido1" placeholder="">
+      			<input type="text" name="apellido1" id="apellido1" required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-    		<label for="apellido2" class="col-sm-2 col-form-label">Apellido materno</label>
+    		<label for="apellido2" class="col-sm-2">Apellido materno</label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control-plaintext" name="apellido2" id="apellido2" placeholder="">
+      			<input type="text" name="apellido2" id="apellido2" required />
     		</div>
   		</div>
 
 		<div class="form-group row">
-    		<label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    		<label for="staticEmail" class="col-sm-2">Email</label>
     		<div class="col-sm-10">
-      			<input type="email" class="form-control-plaintext" id="email" placeholder="email@example.com">
+      			<input type="email" id="email" placeholder="email@example.com" required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-    		<label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    		<label for="inputPassword" class="col-sm-2">Password</label>
     		<div class="col-sm-10">
-      			<input type="password" class="form-control" id="password" placeholder="Password">
+      			<input type="password" id="password" placeholder="Password" required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-    		<label for="staticEmail" class="col-sm-2 col-form-label">Fecha de nacimiento: </label>
+    		<label for="staticEmail" class="col-sm-2">Fecha de nacimiento: </label>
     		<div class="col-sm-10">
-      			<input type="date" class="form-control-plaintext" id="user">
+      			<input type="date" id="user" required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-    		<label for="institucion" class="col-sm-2 col-form-label">Nombre de la institución a la que pertenece</label>
+    		<label for="institucion" class="col-sm-2">Nombre de la institución a la que pertenece</label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control-plaintext" id="institucion" placeholder="">
+      			<input type="text" id="institucion" required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-    		<label for="puesto" class="col-sm-2 col-form-label">Puesto</label>
+    		<label for="puesto" class="col-sm-2">Puesto</label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control-plaintext" id="puesto" placeholder="">
+      			<input type="text" id="puesto" required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-    		<label for="motivos" class="col-sm-2 col-form-label">Breve descripción de los motivos de suscripción: </label>
+    		<label for="motivos" class="col-sm-2">Breve descripción de los motivos de suscripción: </label>
     		<div class="col-sm-10">
-      			<input type="textarea" class="form-control-plaintext" id="motivos" placeholder="">
+      			<input type="textarea" id="motivos" required />
     		</div>
   		</div>
 
   		<div class="form-group row">
-  			<label for="otro" class="col-sm-2 col-form-label">Ingrese los medios por los cuales conoció codeSchool</label>
+  			<label for="otro" class="col-sm-2">Ingrese los medios por los cuales conoció codeSchool</label>
 
   			<div class="col-sm-10">
   				<input type="checkbox" name="Publicidad" value="Publicidad"> Publicidad<br/>
@@ -133,14 +134,14 @@
   		</div>
 
   		<div class="form-group row">
-    		<label for="otro" class="col-sm-2 col-form-label">En caso de elegir otro, describa el medio.</label>
+    		<label for="otro" class="col-sm-2">En caso de elegir otro, describa el medio.</label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control-plaintext" id="otro" placeholder="">
+      			<input type="text" id="otro">
     		</div>
   		</div>
 
   		<div class="form-group row">
-  			<label for="otro" class="col-sm-2 col-form-label">Elija el tipo de suscripción:</label>
+  			<label for="otro" class="col-sm-2">Elija el tipo de suscripción:</label>
     		<div class="col-sm-10">
       			<div><input type="radio" id="gratis" name="tiposus" value="gratis" checked /><label for="gratis">Versión prueba</label></div>
 				<div><input type="radio" id="amigo" name="tiposus" value="amigo" /><label for="amigo">Amigo codeSchool</label></div>
@@ -149,60 +150,17 @@
   		</div>
 
   		<div class="form-group row">
-    		<label for="otro" class="col-sm-2 col-form-label">Código de descurnto (en caso de contar con él): </label>
+    		<label for="otro" class="col-sm-2 col-form-label">Código de descuento (en caso de contar con él) </label>
     		<div class="col-sm-10">
-      			<input type="text" class="form-control-plaintext" id="otro" placeholder="código">
+      			<input type="text" class="form-control-plaintext" id="otro">
     		</div>
   		</div>
 
   		<div class="form-group row">
-  			<button type="button" class="btn btn-primary">Submit</button>
+  			<input type="submit" name="submit" value="submit" required />
   		</div>
   	</form>
 	</div>
-
-
-<!--
-	<form>
-		<fieldset>
-			<legend>Registro</legend>
-
-			<p>Nombre(s) <input type="text" name="" value="" placeholder="nombre"></p>
-			<p>Apellido paterno <input type="text" name="" value="" placeholder="apellido paterno"></p>
-			<p>Apellido materno <input type="text" name="" value="" placeholder="apellido materno"></p>
-			<p>email <input type="email" name=""></p>
-			<p>Fecha de nacimiento <input type="date" name=""></p>
-			<p>Nombre de la institución a la que pertenece <input type="text" name="" placeholder="institución"></p>
-			<p>Puesto <input type="text" name="" placeholder="puesto"></p>
-			
-
-			<p>Breve descripción de los motivos de suscripción</p>
-			<textarea>Motivos de suscripción</textarea>
-
-			<p>Ingrese los medios por los cuales conoció codeSchool</p>
-			<p><input type="checkbox" name="Publicidad" value="Publicidad"> Publicidad</p>
-			<p><input type="checkbox" name="">Redes sociales</p>
-			<p><input type="checkbox" name="">Amigos/conocidos</p>
-			<p><input type="checkbox" name="">Otro</p>
-			<p>En caso de elegir otro, describa el medio:</p>
-			<input type="text" name="" placeholder="Medio por el que conoció CodeSchool">
-
-			<p>Elija el tipo de suscripción:</p>
-
-			<div><input type="radio" id="gratis" name="tiposus" value="gratis" checked /><label for="gratis">Versión prueba</label></div>
-			<div><input type="radio" id="amigo" name="tiposus" value="amigo" /><label for="amigo">Amigo codeSchool</label></div>
-			<div><input type="radio" id="pro" name="tiposus" value="pro" /><label for="pro">Versión PRO</label></div>
-
-			<p>Código de descuento (en caso de contar con él)</p>
-			 <input type="text" name="" placeholder="código">
-			
-			<br/><br/>
-
-			<input type="submit" value="Enviar" name="">
-		</fieldset>
-	</form>
-
-	-->
 
 	<div class="container footer" id="redesSociales">
 		<div class="row">
